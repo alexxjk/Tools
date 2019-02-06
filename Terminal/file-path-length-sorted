@@ -1,0 +1,2 @@
+$ find . | awk 'function base(f){sub(".*/", "", f); return f;} \
+{print length(base($0)), $0}'| sort -nr | head -10
